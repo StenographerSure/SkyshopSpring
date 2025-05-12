@@ -36,6 +36,10 @@ public class StorageService {
         return searchableItems;
     }
 
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(availableProducts.get(id));
+    }
+
 
     private void createTestData() {
         Product apple = new SimpleProduct("apple", 5, UUID.randomUUID());
