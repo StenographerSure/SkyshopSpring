@@ -9,8 +9,8 @@ import java.util.List;
 public class SearchService {
     private final StorageService storageService;
 
-    public SearchService() {
-        this.storageService = new StorageService();
+    public SearchService(StorageService storageService) {
+        this.storageService = storageService;
     }
 
     public List<SearchResult> search(String SearchString) {
